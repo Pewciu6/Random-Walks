@@ -63,6 +63,10 @@ def plot(lengthOfWalks, numOfTrials):
         Max = max(distances)
         Min = min(distances)
 
+        print(Walker.__name__, 'random walk of', numOfSteps, 'steps')
+        print(' Mean =', round(sum(distances)/len(distances), 4))
+        print(' Max =', max(distances), 'Min =', min(distances))
+
         max_values.append(Max)
         min_values.append(Min)
         means.append(Mean)
@@ -81,4 +85,4 @@ def plot(lengthOfWalks, numOfTrials):
 
 #Setting a seed for testing
 random.seed(0)
-plot((10, 100, 1000, 10000, 100000), 100)
+plot((10, 100, 1000, 10000, 20000, 40000, 80000, 100000), 100)
